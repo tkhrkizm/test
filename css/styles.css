@@ -1,15 +1,213 @@
-p {
-	font-size: 30px;
-	color: red;
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+	margin:0;
+	padding:0;
+	border:0;
+	outline:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
 }
-.second {
-	font-size: 50px;
-	color: blue;
+ul, ol, li {
+	list-style:none;
 }
-.third {
-	font-size: 200px;
-	color: orange;
+*,*::before,*::after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
-.fourth {
+
+
+.rootMap {
+	background-color: #e0d6ba;
+}
+.colWrapper01::after {
+	content: "";
 	display: block;
+	clear: both;
+}
+.column06 {
+	width: 100px;
+	float: left;
+}
+.column06:not(:nth-child(3n)) {
+	margin-right: 10px;
+}
+.dlMod01 dt {
+	max-width: 260px;
+	height: 40px;
+	margin-bottom: 15px;
+	border: 1px dashed #8d857b;
+	background-color: #f0eee5;
+	text-align: center;
+	font-weight: bold;
+	line-height: 40px;
+	font-size: 13px;
+}
+.dlMod01 dd {
+	max-width: 260px;
+	margin-bottom: 15px;
+	border-radius: 20px;
+	border: 1px dashed #8d857b;
+	background-color: #fff;
+	text-align: center;
+	font-size: 10px;
+}
+.dlMod01 dt:after {
+	content: "";
+	display: block;
+	background-size: 2px 5px;
+	width: 100%;
+}
+.dlMod01 dt.station1:after {
+	background: url(../img/border_green.png) repeat-y left 35px bottom, url(../img/border_blue.png) repeat-y left 45px bottom,
+	url(../img/border_black.png) repeat-y left 55px bottom,
+	url(../img/border_blue_2.png) repeat-y left 65px bottom;
+	height: 110px;
+}
+.dlMod01 dt.station2 {
+	margin-bottom: 40px;
+}
+.dlMod01 dt.station2:after {
+	background: url(../img/border_green.png) repeat-y center bottom;
+	height: 110px;
+}
+.dlMod01 dt.station3:after {
+	background: url(../img/border_black.png) repeat-y center bottom;
+	height: 200px;
+}
+.station3 + dd,
+dt.station5,
+.station8 + dd {
+	display: none;
+}
+
+/* .column07 */
+.column07 {
+	width: 210px;
+	float: left;
+}
+.column07:first-child {
+	margin-right: 10px;
+}
+.column06:last-child {
+	margin-right: 0;
+}
+.column07 .dlMod01 dt {
+	max-width: 210px;
+}
+.dlMod01 dt.station4:after {
+	background: url(../img/border_blue_2.png) repeat-y center bottom;
+	height: 50px;
+}
+
+/* .column08 */
+.column08 {
+	width: 100%;
+	float: left;
+}
+.column08 .dlMod01 dt {
+	max-width: 840px;
+}
+.dlMod01 dt.station6 {
+	line-height: 1.3;
+}
+.station6 p {
+	padding-top: 0.4em;
+}
+.station6 p span {
+	display: block;
+	font-weight: normal;
+}
+.dlMod01 dt.station6:after {
+	background: url(../img/border_black.png) repeat-y center bottom;
+	height: 50px;
+}
+.dlMod01 dt.station7:after {
+	background: url(../img/border_glay.png) repeat-y center bottom;
+	height: 50px;
+}
+
+.boxColor .dlMod01 dt {
+	background-color: #014e9c;
+	color: #fff;
+	border: none;
+}
+
+@media screen and (min-width: 769px) {
+	.rootMap {
+		width: 1000px;
+		background-color: #e0d6ba;
+		padding: 50px 80px;
+	}
+	.dlMod01 dt {
+		max-width: 260px;
+		height: 80px;
+		margin: 0 auto 15px;
+		line-height: 80px;
+		font-size: 16px;
+	}
+
+	.dlMod01 dd {
+		max-width: 260px;
+		height: 31px;
+		margin: 0 auto 15px;
+		line-height: 31px;
+		font-size: 16px;
+	}
+	.dlMod01 dt.station1:after {
+		background: url(../img/border_green.png) repeat-y left 115px bottom, url(../img/border_blue.png) repeat-y left 125px bottom,
+		url(../img/border_black.png) repeat-y left 135px bottom,
+		url(../img/border_blue_2.png) repeat-y left 145px bottom;
+	}
+
+	.column06 {
+		width: 260px;
+	}
+
+	.column07 {
+		width: 520px;
+	}
+	.column07 .dlMod01 dt {
+		max-width: 520px;
+	}
+
+	.column08 {
+		width: 840px;
+	}
+
+	.dlMod01 dt.station3:after {
+    height: 250px;
+	}
+
+	.dlMod01 dt.station4:after {
+		height: 100px;
+	}
+
+	.station6 p {
+		padding-top: 1.3em;
+		font-size: 16px;
+	}
+	.station6 p span {
+		display: block;
+		font-weight: normal;
+		font-size: 14px;
+	}
+	.dlMod01 dt.station6:after {
+		height: 70px;
+		margin-top: 20px;
+	}
+	.dlMod01 dt.station7:after {
+		height: 60px;
+	}
 }
